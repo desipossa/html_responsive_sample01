@@ -55,7 +55,7 @@ $(function () {
     slideDotsLink = (itm, e) => {
         const tg = e.currentTarget;
         const idx = $(tg).parent().index();
-        const idx2 = [...tg.parentElement.children].indexOf(tg)
+        const idx2 = [...tg.parentElement.children].indexOf(tg);
         console.log(tg.parentElement, [...tg.parentElement.parentElement.children], [...tg.parentElement.parentElement.children].indexOf(tg.parentElement))
         itm.slick('slickGoTo', idx2);
     }
