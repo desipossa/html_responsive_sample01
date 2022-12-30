@@ -8,10 +8,13 @@ $(function () {
     // mainSlide  
 
     $('.main_slide').on('init afterChange', function (e, s, c) {
+        // c = 0,1,2
         var current = $('.main_slide .slick-current');
         current.addClass('on').siblings().removeClass('on');
         $('.mainVisual .main_slide_num span').text(c ? (c + 1) : 1);
         $('.mainVisual .main_slide_num strong').text(s.slideCount);
+        $('.mainVisual .main_slide_dots li').removeClass('on');
+        $('.mainVisual .main_slide_dots li').eq(c ? c : 0).addClass('on');
     });
 
     $('.main_slide').slick({
@@ -40,6 +43,13 @@ $(function () {
         var idx = $(this).parent().index();
         $('.main_slide').slick('slickGoTo', idx);
     });
+
+    $('.mainVisual .main_slide_dots li').on('click', function () {
+        // var idx = $(this).index(); // 0 , 1 , 2;
+        // eq(0) = nth-child(1);
+        $('.mainVisual .main_slide_dots li').removeClass('on');
+        $(this).addClass('on');
+    })
 
 
 

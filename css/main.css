@@ -222,3 +222,25 @@
 .mainVisual .main_slide_arrows button:last-child {
     margin: 0 0 0 700px;
 }
+
+.mainVisual .main_slide_dots {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    display: flex;
+    gap: 10px;
+}
+
+.mainVisual .main_slide_dots li button {
+    background: #ff6347;
+    color: #fff;
+    padding: 5px;
+
+    font-size: 13px;
+}
+
+.mainVisual .main_slide_dots li.on button {
+    background: #333333;
+}
