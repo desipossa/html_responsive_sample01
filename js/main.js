@@ -41,6 +41,14 @@ $(function () {
         $('.main_slide').slick('slickPause')
     });
 
+    $('.mainPromotion .promotion_play button:first-child').on('click', function () {
+        $('.mainPromotion video').trigger('play');
+    });
+    $('.mainPromotion .promotion_play button:last-child').on('click', function () {
+        $('.mainPromotion video').trigger('pause');
+    });
+
+
     $('.mainVisual .main_slide_dots button').on('click', function () {
         var idx = $(this).parent().index();
         $('.main_slide').slick('slickGoTo', idx);
