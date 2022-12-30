@@ -54,6 +54,26 @@ button {
     padding: 100px 0;
 }
 
+.sec .tit {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.sec .tit h2 {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.sec .tit .tit_dec {
+    display: block;
+    font-size: 14px;
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
 .btn {
     background: transparent;
     border: 1px solid #444;

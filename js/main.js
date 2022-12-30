@@ -15,6 +15,8 @@ $(function () {
         $('.mainVisual .main_slide_num strong').text(s.slideCount);
         $('.mainVisual .main_slide_dots li').removeClass('on');
         $('.mainVisual .main_slide_dots li').eq(c ? c : 0).addClass('on');
+
+        $('.mainVisual .main_slide_pic').css({ background: 'url(../img/lesedilarona0' + (c ? (c + 1) : 1) + '.jpg) no-repeat center center/cover' })
     });
 
     $('.main_slide').slick({
@@ -23,7 +25,7 @@ $(function () {
         autoplaySpeed: 4000,
         pauseOnHover: false,
         pauseOnFocus: false,
-    })
+    });
 
     $('.mainVisual .main_slide_arrows button:first-child').on('click', function () {
         $('.main_slide').slick('slickPrev')
