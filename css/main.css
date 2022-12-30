@@ -98,7 +98,9 @@
 
 /* mainVisual */
 
-.mainVisual {}
+.mainVisual {
+    position: relative;
+}
 
 .mainVisual .main_slide {}
 
@@ -195,12 +197,28 @@
     transition: 0.5s 1.5s;
 }
 
-
-
-
 .mainVisual .main_slide .itm .inner {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/*  */
+
+.mainVisual .main_slide_arrows button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 50px;
+}
+
+.mainVisual .main_slide_arrows button:first-child {
+    margin: 0 0 0 -700px;
+}
+
+.mainVisual .main_slide_arrows button:last-child {
+    margin: 0 0 0 700px;
 }

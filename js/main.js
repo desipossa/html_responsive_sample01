@@ -22,11 +22,18 @@ $(function () {
         pauseOnFocus: false,
     })
 
-    $('.mainVisual .left_arrow').on('click', function () {
+    $('.mainVisual .main_slide_arrows button:first-child').on('click', function () {
         $('.main_slide').slick('slickPrev')
     });
-    $('.mainVisual .right_arrow').on('click', function () {
+    $('.mainVisual  .main_slide_arrows button:last-child').on('click', function () {
         $('.main_slide').slick('slickNext')
+    });
+
+    $('.mainVisual .main_slide_play button:first-child').on('click', function () {
+        $('.main_slide').slick('slickPlay')
+    });
+    $('.mainVisual  .main_slide_play button:last-child').on('click', function () {
+        $('.main_slide').slick('slickPause')
     });
 
     $('.mainVisual .main_slide_dots button').on('click', function () {
