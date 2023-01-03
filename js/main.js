@@ -81,8 +81,16 @@ $(function () {
 
 
     $('.produt_slide').slick({
-        arrows: false,
         slidesToShow: 5,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 
     $('.produt_slide_controller>button:first-child').on('click', function () {
@@ -106,6 +114,26 @@ $(function () {
 
         $('.mainCustomer .main_tab_menu>li').removeClass('on');
         $(this).parent().addClass('on');
+    });
+
+
+    $('#f_link select').on('change', function () {
+        var lnk = $(this).val();
+        //lnk && window.open(lnk);
+        if (lnk) {
+            window.open(lnk);
+        }
+    });
+
+    $('.m_open').on('click', function () {
+        $('.header').toggleClass('on');
+        $('.m_btn').toggleClass('on');
+    });
+
+    $('.header').on('scroll wheel touchmove', function () {
+        if ($(this).hasClass('on')) {
+            return false;
+        }
     });
 
 
