@@ -472,7 +472,35 @@
     </div>
 
     <script>
-        AOS.init();
+
+        var option = {
+            disable: 'phone',
+        }
+
+        AOS.init(option);
+
+        //https://stackoverflow.com/questions/53952611/how-to-turn-off-aos-animation-in-mobile-screens
+
+        // $(window).on('load resize', function () {
+        //     var w = $(window).width();
+
+        //     if (w < 769) {
+        //         option = {
+        //             disable: true,
+        //         }
+        //     } else {
+        //         option = {
+        //             disable: false,
+        //         }
+        //     }
+
+        //     AOS.init(option);
+
+        // });
+
+
+
+
     </script>
 </body>
 

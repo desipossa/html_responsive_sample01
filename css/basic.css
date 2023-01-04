@@ -246,3 +246,17 @@ button {
     font-size: 30px;
     padding: 10px;
 }
+
+@media (max-width: 768px) {
+    .to_top {
+        bottom: 0;
+        right: 0;
+    }
+
+    .to_top i {
+        background: #ff6347;
+        color: #fff;
+        font-size: 5vw;
+        padding: 5px;
+    }
+}
